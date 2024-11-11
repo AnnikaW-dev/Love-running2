@@ -76,12 +76,12 @@ nav {
 display:block;
 }
 
-/* take a way the checkbox and X from the header*/
+/* take a way the checkbox from the header*/
 #nav-toggle{
     display:none;
 }
 
-
+/*Make the X bigger or what ever icon we put there*/
 .nav-toggle-label{
     font-size: 2rem;
 }
@@ -91,6 +91,7 @@ main {
     background-color: lightblue;
     /* Make main element take up any surplus to push footer down*/
     flex: 1 0 auto;
+    margin-top: 47px;    /* Push the content down for the main section due to that it dose not show under the header*/
 }
 
 /*footer*/
