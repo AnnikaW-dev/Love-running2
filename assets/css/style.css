@@ -22,11 +22,14 @@ body{
 /*Header*/
 header {
     background-color:#ffffff;
-    padding:0rem;
+    padding:0 1rem;
     position: fixed;
     z-index: 99; 
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;                    /* Make the lable to show*/
+    justify-content: space-between;    /*Add space between contents*/
+    align-items: baseline;/*Make sure they all show in a line verticlly */
 }
  
 header a {
@@ -60,14 +63,28 @@ h1{
 nav {
     position: absolute;
     background-color: #ffffff;
-    padding:0rem;
-    position: fixed;
-    z-index: 99; 
+    padding:0 1rem;
     width: 100%;
+    left:0;
     box-shadow: 0 2px 2px #3a3a3a;
+    display:none;
+    top:100%;     /*0% would represent the top of the parent, and 100% represents the bottom of it. so by set this to 100% the menue wwill apper under the nav */
+}
+
+/*Nav toggle*/
+#nav-toggle:checked~nav {  /* we need a tilde to indicate that we want to target the adjoining nav element*/
+display:block;
+}
+
+/* take a way the checkbox and X from the header*/
+#nav-toggle{
     display:none;
 }
 
+
+.nav-toggle-label{
+    font-size: 2rem;
+}
 
 /*main*/
 main {
