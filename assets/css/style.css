@@ -33,6 +33,7 @@ header a {
     text-decoration: none;   /* fixe te link text ta be blue and get an aunderline*/
     color: inherit;
 }
+
  
 h1{
     font-family: 'Oswald', sans-serif;
@@ -54,6 +55,20 @@ h1{
 .active{
     border-bottom: 1px solid #3a3a3a;
 }
+
+/* Style Navbar with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    padding:0rem;
+    position: fixed;
+    z-index: 99; 
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display:none;
+}
+
+
 /*main*/
 main {
     background-color: lightblue;
