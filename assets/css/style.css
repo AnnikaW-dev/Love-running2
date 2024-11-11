@@ -46,7 +46,7 @@ h1{
 }
 
 #menu{
-    text-size-adjust: 110%;
+    font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
@@ -63,9 +63,9 @@ h1{
 nav {
     position: absolute;
     background-color: #ffffff;
+    width: 100%; 
+    left:0; 
     padding:0 1rem;
-    width: 100%;
-    left:0;
     box-shadow: 0 2px 2px #3a3a3a;
     display:none;
     top:100%;     /*0% would represent the top of the parent, and 100% represents the bottom of it. so by set this to 100% the menue wwill apper under the nav */
@@ -86,10 +86,10 @@ display:block;
     font-size: 2rem;
 }
 
-/*main*/
+/*main Content*/
 main {
     background-color: lightblue;
-    /* Make main element take up any surplus to push footer down*/
+    /* Make main element take up any surplus space to push footer down*/
     flex: 1 0 auto;
     margin-top: 47px;    /* Push the content down for the main section due to that it dose not show under the header*/
 }
@@ -97,4 +97,28 @@ main {
 /*footer*/
 footer {
     background-color:orange  ;
+}
+
+/*Media query: tablets & Larger ( 768px & up) */
+
+@media screen and (min-width:768px){   /*mellan slag mellan ){är jätteviktigt annars funkar inte koden)
+    /*Header*/
+    nav {
+        display: block;        /*Make sure the navbar allways is displayed*/
+        position: relative;     /*Puts the menu back in the header*/
+        box-shadow: none;
+        width: fit-content;     /* Will not take all the space in the header*/
+        padding-right: 1rem;    /*allow our felx styles from earlier to puush it nicely to the right*/
+    }
+    #menu {
+        display: flex;
+    }
+
+    #menu > li{
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display:none;
+    }
 }
